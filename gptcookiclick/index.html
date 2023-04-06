@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cookie Clicker</title>
+    <script src="gpt.js"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+      }
+      #cookie {
+        margin: 0 auto;
+        display: block;
+        margin-top: 50px;
+        width: 200px;
+        height: 200px;
+        background-image: url("cookie.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+      #money {
+        font-size: 32px;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+      .upgrade {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        margin-top: 20px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+      #grandma {
+        background-image: url("grandma.svg");
+      }
+      #factory {
+        background-image: url("factory.svg");
+      }
+      #mine {
+        background-image: url("mine.svg");
+      }
+      #cursor {
+        background-image: url("cursor.svg");
+      }
+      .cursor {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background-image: url("cursor.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 999;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Cookie Clicker</h1>
+    <div id="cookie"></div>
+    <div>
+      <p>Money:</p>
+      <p id="money">$0</p>
+    </div>
+    <div>
+      <p>Upgrades:</p>
+      <div id="grandma" class="upgrade">
+        <p>Cost: 10</p>
+      </div>
+      <div id="factory" class="upgrade">
+        <p>Cost: 100</p>
+      </div>
+      <div id="mine" class="upgrade">
+        <p>Cost: 1000</p>
+      </div>
+      <div id="cursor" class="upgrade">
+        <p>Cost: <span id="cursor-cost">10</span></p>
+        <p>Count: <span id="cursor-count">0</span></p>
+      </div>
+    </div>
+  </body>
+</html>
