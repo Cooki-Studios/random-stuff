@@ -1,29 +1,51 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Cookie Clicker</title>
-    <script src="script.js"></script>
+    <title>Cooki Clicker</title>
+    <link rel="icon" href="/cooki.svg" type="image/svg+xml">
+    <script src="cooki.js"></script>
     <style>
       body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
         font-family: sans-serif;
         text-align: center;
+        background-color: whitesmoke;
+        color: #151515;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
       }
-      #cookie {
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #151515;
+          color: whitesmoke;
+        }
+      }
+
+      #cooki {
         margin: 0 auto;
         display: block;
         margin-top: 50px;
         width: 200px;
         height: 200px;
-        background-image: url("cookie.svg");
+        background-image: url("cooki.svg");
         background-size: contain;
         background-repeat: no-repeat;
         cursor: pointer;
       }
+
       #money {
         font-size: 32px;
         font-weight: bold;
         margin-top: 20px;
       }
+
       .upgrade {
         display: inline-block;
         width: 100px;
@@ -33,18 +55,23 @@
         background-repeat: no-repeat;
         cursor: pointer;
       }
+
       #grandma {
         background-image: url("grandma.svg");
       }
+
       #factory {
         background-image: url("factory.svg");
       }
+
       #mine {
         background-image: url("mine.svg");
       }
+
       #cursor {
         background-image: url("cursor.svg");
       }
+
       .cursor {
         position: absolute;
         width: 50px;
@@ -57,8 +84,9 @@
     </style>
   </head>
   <body>
-    <h1>Cookie Clicker</h1>
-    <div id="cookie"></div>
+    <h1>Cooki Clicker</h1>
+    <p>(Brought to you by Cooki Studios, ChatGPT, Microsoft Copilot and Google Bard)</p>
+    <div id="cooki"></div>
     <div>
       <p>Money:</p>
       <p id="money">$0</p>

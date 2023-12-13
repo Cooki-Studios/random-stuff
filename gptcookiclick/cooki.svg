@@ -1,0 +1,56 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+
+<defs>
+    <filter id="shadow">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+        <feOffset dx="0" dy="0" result="offsetblur" />
+        <feComposite in="offsetblur" in2="SourceGraphic" operator="out" />
+    </filter>
+    <filter id="shadow1">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
+        <feOffset dx="0" dy="0" result="offsetblur" />
+        <feComposite in="offsetblur" in2="SourceGraphic" operator="out" />
+    </filter>
+    <filter id="shadow2">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+        <feOffset dx="0" dy="0" result="offsetblur" />
+        <feComposite in="offsetblur" in2="SourceGraphic" operator="out" />
+    </filter>
+    <filter id="shadow3">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="3" />
+        <feOffset dx="0" dy="0" result="offsetblur" />
+        <feComposite in="offsetblur" in2="SourceGraphic" operator="out" />
+    </filter>
+    <filter id="shadow4">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="4" />
+        <feOffset dx="0" dy="0" result="offsetblur" />
+        <feComposite in="offsetblur" in2="SourceGraphic" operator="out" />
+    </filter>
+    <filter id="shadow5">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+        <feOffset dx="0" dy="2" result="offsetblur" />
+        <feComposite in="offsetblur" in2="SourceGraphic" operator="out" />
+    </filter>
+</defs>
+
+<circle id="base" cx="100" cy="100" r="90" fill="#F5E2B9" />
+<circle id="base-shadow" cx="100" cy="100" r="90" filter="url(#shadow)" />
+
+<circle id="chip" cx="60" cy="65" r="15" fill="#9E7C3F" />
+<circle id="chip-shadow" cx="60" cy="65" r="15" filter="url(#shadow2)" />
+
+<circle id="chip2" cx="125" cy="70" r="30" fill="#9E7C3F" />
+<circle id="chip2-shadow" cx="125" cy="70" r="30" width="4" height="6" filter="url(#shadow5)" />
+
+<rect x="125" y="70" width="20" height="40" filter="url(#shadow5)" />
+
+<circle id="chip3" cx="60" cy="125" r="20" fill="#9E7C3F" />
+<circle id="chip3-shadow" cx="60" cy="125" r="20" filter="url(#shadow4)" />
+
+<circle id="chip4" cx="150" cy="130" r="12" fill="#9E7C3F" />
+<circle id="chip4-shadow" cx="150" cy="130" r="12" filter="url(#shadow1)" />
+
+<circle id="chip5" cx="110" cy="150" r="18" fill="#9E7C3F" />
+<circle id="chip5-shadow" cx="110" cy="150" r="18" filter="url(#shadow3)" />
+
+</svg>
