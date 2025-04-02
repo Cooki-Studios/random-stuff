@@ -1,6 +1,6 @@
 let part = 0;
 let data = null;
-fetch("remember/stuf.json").then((res) => res.json()).then((json) => {
+fetch("remember/stuff.json").then((res) => res.json()).then((json) => {
     document.getElementById("file").remove();
     data = json;
     main();
@@ -35,7 +35,7 @@ function main() {
                 if (name !== line.name) {
                     document.getElementsByClassName("fill-in-the-blanks")[0].innerHTML += "<h1>" + line.name.toUpperCase() + "</h1>";
                 }
-                if (localStorage.getItem("part") && localStorage.getItem("part").includes(part)) {
+                if (localStorage.getItem("part") && localStorage.getItem("part").split("_").includes(String(part))) {
                     remove = (data.name.includes(line.name) || data.name.includes("All"));
                 }
                 name = line.name;
@@ -84,7 +84,7 @@ function replaceWords(words) {
     let temp = "<p>"
     let numWordsToReplace = 0;
     if (localStorage.getItem("part")) {
-        numWordsToReplace = (localStorage.getItem("part").match(new RegExp(String(part), "g")) || "0").length;
+        numWordsToReplace = localStorage.getItem("part").split("_").filter(item => item === String(part)).length;
     }
     const randomIndexes = new Set();
     while (randomIndexes.size < numWordsToReplace && randomIndexes.size < words.length) {
@@ -227,7 +227,7 @@ function moveToNextInput(current, back) {
             }
         }
 
-        localStorage.setItem("part", localStorage.getItem("part") + part);
+        localStorage.setItem("part", localStorage.getItem("part") + part + "_");
         // setTimeout(() => {
             const input = document.createElement("input");
             input.style.visibility = "hidden";
@@ -252,7 +252,7 @@ document.body.onkeyup = (e) => {
         document.getElementsByClassName("fill-in-the-blanks")[0].scrollTop = 0;
         document.getElementById("confetti1").style.visibility = "hidden";
         document.getElementById("confetti2").style.visibility = "hidden";
-        localStorage.setItem("part", part);
+        localStorage.setItem("part", localStorage.getItem("part") + part + "_");
         main();
     } else if (e.key === "Control" || ((os === "Mac OS" || os === "iOS") && e.key === "Meta")) {
         document.getElementById("reset").style.visibility = "hidden";
@@ -265,7 +265,7 @@ document.body.onpointerup = (e) => {
         document.getElementsByClassName("fill-in-the-blanks")[0].scrollTop = 0;
         document.getElementById("confetti1").style.visibility = "hidden";
         document.getElementById("confetti2").style.visibility = "hidden";
-        localStorage.setItem("part", part);
+        localStorage.setItem("part", localStorage.getItem("part") + part + "_");
         main();
     } else if (os !== "iOS" && os !== "Android") {
         document.getElementById("reset").style.visibility = "hidden";
