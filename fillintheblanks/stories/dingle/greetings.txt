@@ -1,0 +1,11 @@
+Greetings! {first_name1} {last_name1} here!
+Hey fellas! It's {first_name1} {last_name1} here.
+Hey! {first_name1} {last_name1} here.
+'Ello, {first_name1} {last_name1} here.
+What's up guys, it's {first_name1}illy Billy Hunter Scott Michael Arnold Jacob Lanthrop Kevin Steven Oscar {last_name1} Sr here.
+Hey! {first_name1} {last_name1} here again!
+Hey! {first_name1} {last_name1} here.
+Hey guys, {first_name1} {last_name1} here!
+Hi! My name is {first_name1} Winstead
+Hello! It's your dear old friend {first_name1} {last_name1} here!
+Hey guys, {first_name1} {last_name1} here.
